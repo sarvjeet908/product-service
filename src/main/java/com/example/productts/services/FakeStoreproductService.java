@@ -72,6 +72,9 @@ public class FakeStoreproductService implements IProductService{
 
     @Override
     public List<ProductresponseDto> getAllproducts() {
+        //since by looking into fakestore getall product response we got to know it's returning Array of Product response dto
+        //that's why created Array with FakeStoreProduct type
+        //lets check if it is showing in git
         FakeStoreProduct[] responsedtolist = restTemplate.getForObject("https://fakestoreapi.com/products", FakeStoreProduct[].class);
         List<ProductresponseDto> output=new ArrayList<>();
 
